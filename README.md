@@ -6,6 +6,65 @@
 
 This documentation provides an overview of the Perfect Four game code, explaining its functions and how the game operates.
 
+# Perfect Four Game Rules and Instructions
+
+Welcome to the Perfect Four game! This game challenges you to guess a randomly generated 4-digit number with unique digits. Here are the rules and instructions:
+
+1. **Objective:** Guess the correct 4-digit number within 8 attempts.
+
+2. **Game Start:**
+   - The game will generate a random 4-digit number with unique digits. For example: 2574
+   - You have 8 attempts to guess this number.
+
+3. **Guessing Rules:**
+   - Enter a 4-digit number when prompted.
+   - Digits must be different within your guess.
+   - *Example:* Valid guess - 1369; Invalid guess - 1123.
+
+4. **Feedback:**
+   - After each guess, you will receive feedback on the correctness of your digits.
+   - "Well Located" indicates the number of digits correctly positioned and valued.
+   - "Misplaced" indicates the number of digits present but in the wrong position.
+   - *Example:* If your guess is 1275 and the random number is 2574, feedback might be "Well Located: 2 | Misplaced: 1."
+
+5. **Winning:**
+   - If you correctly guess all 4 digits in their correct positions, you win!
+   - The game will congratulate you on your victory.
+
+6. **Losing:**
+   - You have 8 attempts. If you don't guess correctly within these attempts, you lose.
+   - The correct number will be revealed upon losing.
+
+7. **Repeated Digits:**
+   - If you enter a number with repeated digits, you'll be prompted to enter a different one.
+   - Repeated digit entries will result in a deduction of attempts.
+   - *Example:* If your guess is 1123, you'll be prompted to enter a different number because you are repeating the number "1".
+
+8. **Game Display:**
+   - The game will display your current guess, well-located and misplaced digits, and the remaining number of guesses after each attempt.
+   - *Example:* After a guess, the display might be:
+     ```
+     1. Your guess: 1369
+     2. Well Located: 1 | Misplaced: 2
+     3. Guesses left: 6
+     ```
+
+9. **Starting the Game:**
+   - Run the game in the cosole by typing in the terminal:
+
+     ```javascript
+     node perfectFour.js
+     ``` 
+
+Good luck and enjoy the Perfect Four game!
+
+---
+---
+---
+---
+
+# Code Overview
+
 ## 1. `checkGuess` Function
 
 This function takes two parameters, `randomNumber` and `userGuess`, and compares them to determine how well the user's guess matches the randomly generated number.

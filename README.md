@@ -31,7 +31,8 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
    - "Misplaced" indicates the number of digits present but in the wrong position.
    - *Example:* 
    ```
-   If your guess is 1275 and the random number is 2574, feedback might be "Well Located: 2 | Misplaced: 1."
+   If your guess is 1275 and the random number is 2574, 
+   feedback might be "Well Located: 2 | Misplaced: 1."
     ```
 
 5. **Winning:**
@@ -47,15 +48,21 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
    - Repeated digit entries will result in a deduction of attempts.
    - *Example:* 
    ```
-   If your guess is 1123, you'll be prompted to enter a different number because you are repeating the number "1".
+   If your guess is 1123, 
+   you'll be prompted to enter a different number 
+   because you are repeating the number "1".
     ```
     - The same will happen if you enter a number with more or less than 4 digits.
     - More or less than 4 digits will result in a deduction of attempts.
     - *Example:* 
     ```
-    If your guess is 123, you'll be prompted to enter a different number because you are missing a digit.
+    If your guess is 123, 
+    you'll be prompted to enter a different number 
+    because you are missing a digit.
 
-    If your guess is 12345, you'll be prompted to enter a different number because you have an extra digit.
+    If your guess is 12345, 
+    you'll be prompted to enter a different number 
+    because you have an extra digit.
     ```
 
 8. **Game Display:**

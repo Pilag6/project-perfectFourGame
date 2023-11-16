@@ -6,7 +6,7 @@
 
 This documentation provides an overview of the Perfect Four game code, explaining its functions and how the game operates.
 
-# Perfect Four Game Rules and Instructions
+# Rules and Instructions
 
 Welcome to the Perfect Four game! This game challenges you to guess a randomly generated 4-digit number with unique digits. Here are the rules and instructions:
 
@@ -19,13 +19,20 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
 3. **Guessing Rules:**
    - Enter a 4-digit number when prompted.
    - Digits must be different within your guess.
-   - *Example:* Valid guess - 1369; Invalid guess - 1123.
+   - *Example:* 
+   ```
+   Valid guess - 1369; 
+   Invalid guess - 1123.
+    ```
 
 4. **Feedback:**
    - After each guess, you will receive feedback on the correctness of your digits.
    - "Well Located" indicates the number of digits correctly positioned and valued.
    - "Misplaced" indicates the number of digits present but in the wrong position.
-   - *Example:* If your guess is 1275 and the random number is 2574, feedback might be "Well Located: 2 | Misplaced: 1."
+   - *Example:* 
+   ```
+   If your guess is 1275 and the random number is 2574, feedback might be "Well Located: 2 | Misplaced: 1."
+    ```
 
 5. **Winning:**
    - If you correctly guess all 4 digits in their correct positions, you win!
@@ -38,7 +45,18 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
 7. **Repeated Digits:**
    - If you enter a number with repeated digits, you'll be prompted to enter a different one.
    - Repeated digit entries will result in a deduction of attempts.
-   - *Example:* If your guess is 1123, you'll be prompted to enter a different number because you are repeating the number "1".
+   - *Example:* 
+   ```
+   If your guess is 1123, you'll be prompted to enter a different number because you are repeating the number "1".
+    ```
+    - The same will happen if you enter a number with more or less than 4 digits.
+    - More or less than 4 digits will result in a deduction of attempts.
+    - *Example:* 
+    ```
+    If your guess is 123, you'll be prompted to enter a different number because you are missing a digit.
+
+    If your guess is 12345, you'll be prompted to enter a different number because you have an extra digit.
+    ```
 
 8. **Game Display:**
    - The game will display your current guess, well-located and misplaced digits, and the remaining number of guesses after each attempt.

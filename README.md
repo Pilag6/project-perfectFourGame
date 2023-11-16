@@ -61,18 +61,18 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
 8. **Game Display:**
    - The game will display your current guess, well-located and misplaced digits, and the remaining number of guesses after each attempt.
    - *Example:* After a guess, the display might be:
-     ```
+    ```
      1. Your guess: 1369
      2. Well Located: 1 | Misplaced: 2
      3. Guesses left: 6
-     ```
+    ```
 
 9. **Starting the Game:**
    - Run the game in the cosole by typing in the terminal:
 
-     ```javascript
+    ```javascript
      node perfectFour.js
-     ``` 
+    ``` 
 
 Good luck and enjoy the Perfect Four game!
 

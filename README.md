@@ -6,6 +6,32 @@
 
 This documentation provides an overview of the Perfect Four game code, explaining its functions and how the game operates.
 
+# Installation
+
+1. Clone the repository to your local machine.
+
+    ```javascript
+    git clone https://github.com/Pilag6/project-perfectFourGame.git
+    ```
+
+2. Navigate to the project directory.
+
+    ```javascript
+    cd project-perfectFourGame/
+    ```
+
+3. Install the dependencies.
+
+    ```javascript
+    npm install
+    ```
+
+4. Run the game.
+
+    ```javascript
+    node play
+    ```
+
 # Rules and Instructions
 
 Welcome to the Perfect Four game! This game challenges you to guess a randomly generated 4-digit number with unique digits. Here are the rules and instructions:
@@ -13,79 +39,89 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
 1. **Objective:** Guess the correct 4-digit number within 8 attempts.
 
 2. **Game Start:**
-   - The game will generate a random 4-digit number with unique digits. For example: 2574
-   - You have 8 attempts to guess this number.
+
+    - The game will generate a random 4-digit number with unique digits. For example: 2574
+    - You have 8 attempts to guess this number.
 
 3. **Guessing Rules:**
-   - Enter a 4-digit number when prompted.
-   - Digits must be different within your guess.
-   - *Example:* 
-   ```
-   Valid guess - 1369; 
-   Invalid guess - 1123.
+
+    - Enter a 4-digit number when prompted.
+    - Digits must be different within your guess.
+    - _Example:_
+
+    ```
+    Valid guess - 1369;
+    Invalid guess - 1123.
     ```
 
 4. **Feedback:**
-   - After each guess, you will receive feedback on the correctness of your digits.
-   - "Well Located" indicates the number of digits correctly positioned and valued.
-   - "Misplaced" indicates the number of digits present but in the wrong position.
-   - *Example:* 
-   ```
-   If your guess is 1275 and the random number is 2574, 
-   feedback might be "Well Located: 2 | Misplaced: 1."
+
+    - After each guess, you will receive feedback on the correctness of your digits.
+    - "Well Located" indicates the number of digits correctly positioned and valued.
+    - "Misplaced" indicates the number of digits present but in the wrong position.
+    - _Example:_
+
+    ```
+    If your guess is 1275 and the random number is 2574,
+    feedback might be "Well Located: 2 | Misplaced: 1."
     ```
 
 5. **Winning:**
-   - If you correctly guess all 4 digits in their correct positions, you win!
-   - The game will congratulate you on your victory.
+
+    - If you correctly guess all 4 digits in their correct positions, you win!
+    - The game will congratulate you on your victory.
 
 6. **Losing:**
-   - You have 8 attempts. If you don't guess correctly within these attempts, you lose.
-   - The correct number will be revealed upon losing.
+
+    - You have 8 attempts. If you don't guess correctly within these attempts, you lose.
+    - The correct number will be revealed upon losing.
 
 7. **Repeated Digits:**
-   - If you enter a number with repeated digits, you'll be prompted to enter a different one.
-   - Repeated digit entries will result in a deduction of attempts.
-   - *Example:* 
-   ```
-   If your guess is 1123, 
-   you'll be prompted to enter a different number 
-   because you are repeating the number "1".
+
+    - If you enter a number with repeated digits, you'll be prompted to enter a different one.
+    - Repeated digit entries will result in a deduction of attempts.
+    - _Example:_
+
     ```
+    If your guess is 1123,
+    you'll be prompted to enter a different number
+    because you are repeating the number "1".
+    ```
+
     - The same will happen if you enter a number with more or less than 4 digits.
     - More or less than 4 digits will result in a deduction of attempts.
-    - *Example:* 
+    - _Example:_
+
     ```
-    If your guess is 123, 
-    you'll be prompted to enter a different number 
+    If your guess is 123,
+    you'll be prompted to enter a different number
     because you are missing a digit.
 
-    If your guess is 12345, 
-    you'll be prompted to enter a different number 
+    If your guess is 12345,
+    you'll be prompted to enter a different number
     because you have an extra digit.
     ```
 
 8. **Game Display:**
-   - The game will display your current guess, well-located and misplaced digits, and the remaining number of guesses after each attempt.
-   - *Example:* After a guess, the display might be:
+
+    - The game will display your current guess, well-located and misplaced digits, and the remaining number of guesses after each attempt.
+    - _Example:_ After a guess, the display might be:
+
     ```
      1. Your guess: 1369
      2. Well Located: 1 | Misplaced: 2
      3. Guesses left: 6
     ```
-
-9. **Starting the Game:**
-   - Run the game in the cosole by typing in the terminal:
-
-    ```javascript
-     node perfectFour.js
-    ``` 
+    - The game will also display the correct number upon losing.
 
 Good luck and enjoy the Perfect Four game!
 
 ---
+
 ---
+
 ---
+
 ---
 
 # Code Overview

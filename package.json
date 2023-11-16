@@ -1,0 +1,33 @@
+{
+  "name": "perfect-four-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "Pila Gonzalez",
+    "email": "pilag6@gmail.com",
+    "url": "https://github.com/Pilag6/"
+  },
+  "contributors": [],
+  "scripts": {
+    "dev": "",
+    "test": ""
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

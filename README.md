@@ -135,26 +135,26 @@ This function takes two parameters, `randomNumber` and `userGuess`, and compares
 
 ### Function Logic
 
-1. Convert Numbers to Arrays:
+1. **Convert Numbers to Arrays:**
 
 - `randomNumberDigits`: Convert the randomNumber to a string and then split it into an array of individual digits.
 - `userGuessDigits`: Convert the userGuess to a string and then split it into an array of individual digits.
 
-2. Initialize Counters:
+2. **Initialize Counters:**
 
 - `wellLocated`: Counter for digits that are correctly located in both position and value.
 - `misplaced`: Counter for digits that are present in the user's guess but located in the wrong position compared to the random number.
 
-3. Check Well-Located Digits:
+3. **Check Well-Located Digits:**
 
 - Iterate through each digit of the guess using a for loop.
 - If the digit at the current position in `randomNumberDigits` is equal to the digit at the same position in `userGuessDigits`, increment the `wellLocated` counter.
 
-4. Check Misplaced Digits:
+4. **Check Misplaced Digits:**
 
 If a digit in `userGuessDigits` is not well-located (checked in the previous step) but exists in `randomNumberDigits`, increment the `misplaced` counter.
 
-5. Return Results:
+5. **Return Results:**
 
 Return an object containing the counts of well-located and misplaced digits: `{ wellLocated, misplaced }`.
 
@@ -166,7 +166,6 @@ const userNumExample = 7142;
 
 const result = checkGuess(randomNumExample, userNumExample);
 console.log(result); // { wellLocated: 1, misplaced: 2 }
-console.log("-".repeat(20));
 ```	
 In this example, the function compares the digits at each position in the `randomNumber` and `userGuess`. One digit is well-located (digit 7), and two digits are misplaced (digits 1 and 2). The result object reflects these counts.
 

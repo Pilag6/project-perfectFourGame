@@ -147,10 +147,32 @@ This function generates a random 4-digit number with unique digits.
 
 ## 3. `hasRepeatedDigits` Function
 
-This function checks if a given number has repeated digits.
+This function is designed to check whether a given number has repeated digits. It's a crucial part of the Perfect Four game as having repeated digits in a guess is against the game rules. Here's a breakdown of how the function works:
 
--   It converts the number to a string and then creates an array of its digits.
--   The array is filtered to include only unique digits, and the function returns `true` if the length of the original array is not equal to the length of the unique digits array.
+Explanation:
+1. **Conversion to String:**
+
+`const digits = String(number).split("");`
+- The function starts by converting the given number to a string and then splitting it into an array of individual digits.
+
+2. **Filtering Unique Digits:**
+
+`const uniqueDigits = digits.filter((digit, index) => { return digits.indexOf(digit) === index; });`
+
+- The function uses the `filter` method to create an array (`uniqueDigits`) containing only the unique digits. The filter function checks if the index of the current digit is equal to its first occurrence in the array.
+
+3. **Comparison of Lengths:**
+
+`return digits.length !== uniqueDigits.length;`
+
+- Finally, the function compares the length of the original array of digits with the length of the array containing unique digits. If they are not equal, it indicates that there are repeated digits in the original number, and the function returns `true`.
+
+Example:
+```javascript
+const hasRepeated = hasRepeatedDigits(1234); // Returns false (no repeated digits)
+const hasRepeatedAgain = hasRepeatedDigits(1224); // Returns true (repeated digit: 2)
+```	
+In the Perfect Four game, this function is used to ensure that the user's guess doesn't contain repeated digits. If a repeated digit is detected, the game prompts the user to enter a different 4-digit number.
 
 ## 4. `displayStatus` Function
 

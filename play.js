@@ -79,7 +79,7 @@ function generateRandomNumber() {
     return randomNumber;
 }
 
-// // Function to check if the number has repeated digits
+// Function to check if the number has repeated digits
 
 function hasRepeatedDigits(number) {
     const digits = String(number).split("");

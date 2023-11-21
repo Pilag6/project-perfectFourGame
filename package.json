@@ -28,6 +28,7 @@
     "test": ""
   },
   "dependencies": {
+    "log-update": "^6.0.0",
     "readline-sync": "^1.4.10"
   }
 }

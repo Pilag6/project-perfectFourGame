@@ -131,14 +131,17 @@ function perfectFour() {
 ||=||=||=||=|                              |=||=||=||=||
 ||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||=||\x1b[0m
 
-             Try to guess the 4-digit number. 
+  Try to guess the 4-digit number in the correct order 
                 
-                   *******RULES*******
+\x1b[43m*******RULES*******\x1b[0m
 
-                   You have 8 guesses.
-              The 4 digits must be different.
-                  Let's the game begin!
-                       GOOD LUCK!`);
+You have 8 guesses.
+The 4 digits must be different.
+
+Check out the complete rules here: \x1b[36mhttps://bit.ly/47Cfrok\x1b[0m
+                  
+Let's the game begin!
+GOOD LUCK!`);
 
     let guessNumber = 0;
     while (guessesLeft > 0) {
@@ -273,10 +276,13 @@ function perfectFour() {
             continue;
         }
 
-        const { wellLocated, misplaced } = checkGuess(randomNumber, userGuess);
+        let result = checkGuess(randomNumber, userGuess);
+        let wellLocated = result.wellLocated;
+        let misplaced = result.misplaced;
+
         displayStatus(userGuess, wellLocated, misplaced, guessesLeft - 1);
 
-
+        // If the user guessed the number, display: You win!!! and exit the program.
         if (wellLocated === 4) {
             console.log(`
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -295,7 +301,7 @@ function perfectFour() {
             ⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⠟⠉⠻⢶⣄⡀⠀⢀⣼⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠈⠉⠉⠉⢿⠏⠀⠀⠀⠀⠈⠙⣷⣿⣅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⡾⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            ⠀⠀⠀⠀⠀⠀⠀⣴⡇⠀⠀⠀⠀⠀⠀⠈⠙⠛⠋⠀YOU WIN!!!⢠⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            ⠀⠀⠀⠀⠀⠀⠀⣴⡇⠀⠀⠀⠀⠀⠀⠈⠙⠛⠋⠀\x1b[36mYOU WIN!!!\x1b[0m⢠⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣷⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣿⠿⠿⠶⠶⠶⠶⠶⠾⠿⠿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀

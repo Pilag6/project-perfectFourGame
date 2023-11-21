@@ -62,21 +62,11 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
     - _Example:_
 
     ```
-    If your guess is 1275 and the random number is 2574,
+    If your guess is 1275 and the random number is 1574,
     feedback might be "Well Located: 2 | Misplaced: 1."
     ```
 
-5. **Winning:**
-
-    - If you correctly guess all 4 digits in their correct positions, you win!
-    - The game will congratulate you on your victory.
-
-6. **Losing:**
-
-    - You have 8 attempts. If you don't guess correctly within these attempts, you lose.
-    - The correct number will be revealed upon losing.
-
-7. **Repeated Digits:**
+5. **Repeated Digits:**
 
     - If you enter a number with repeated digits, you'll be prompted to enter a different one.
     - Repeated digit entries will result in a deduction of attempts.
@@ -101,6 +91,16 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
     you'll be prompted to enter a different number
     because you have an extra digit.
     ```
+
+6. **Winning:**
+
+    - If you correctly guess all 4 digits in their correct positions, you win!
+    - The game will congratulate you on your victory.
+
+7. **Losing:**
+
+    - You have 8 attempts. If you don't guess correctly within these attempts, you lose.
+    - The correct number will be revealed upon losing.
 
 8. **Game Display:**
 

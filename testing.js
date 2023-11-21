@@ -42,13 +42,12 @@ import rs from "readline-sync";
 
 // If the user types less than four numbers or more than four numbers, display: You must type 4 numbers
 
+
 // Function to check the user's guess against the random number
 function checkGuess(randomNumber, userGuess) {
     const randomNumberDigits = randomNumber.toString().split("");
-    // console.log(randomNumberDigits)
 
     const userGuessDigits = userGuess.toString().split("");
-    // console.log(userGuessDigits)
 
     let wellLocated = 0;
     let misplaced = 0;
@@ -61,12 +60,8 @@ function checkGuess(randomNumber, userGuess) {
         }
     }
 
-    // console.log("Well Located", wellLocated, "Misplaced", misplaced)
-
     return { wellLocated, misplaced };
 }
-
-// checkGuess(1234, 1254)
 
 // // Function to generate a random 4-digit different number
 function generateRandomNumber() {
@@ -79,7 +74,7 @@ function generateRandomNumber() {
     return randomNumber;
 }
 
-// // Function to check if the number has repeated digits
+// Function to check if the number has repeated digits
 
 function hasRepeatedDigits(number) {
     const digits = String(number).split("");
@@ -117,7 +112,7 @@ function perfectFour() {
         \x1b[44m       ⠀⣾⣿⠁⢰⣿⣿⣿⣿⣿⣿⣿⡿⠋⢀⣴⣿⠀⠀⢸⣿⡆⠈⣿⣷⠀        \x1b[0m
         \x1b[44m       ⢠⣿⡏⢀⣿⣿⣿⣿⣿⣿⡿⠋⢀⣴⣿⣿⣿⠀⠀⢸⣿⣿⡀⢹⣿⡄        \x1b[0m
         \x1b[44m       ⢸⣿⡇⢸⣿⣿⣿⣿⡿⠋⢀⣴⣿⣿⣿⣿⣿⠀⠀⢸⣿⣿⡇⢸⣿⡇        \x1b[0m
-        \x1b[44m       ⠘⣿⣇⠈⣿⣿⡿⠋⠀⠀⠉⠉⠉⠉⠉⠉⠁⠀⠀⠈⠉⠉⠁⣸⣿⠃        \x1b[0m
+        \x1b[44m       ⠘⣿⣇⠈⣿⣿⡿⠋⠀   PERFECT ⠉⠉⠁⣸⣿⠃        \x1b[0m
         \x1b[44m       ⠀⢿⣿⡀⠸⣿⣷⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⠀⠀⢠⣤⠄⢀⣿⡿⠀        \x1b[0m
         \x1b[44m       ⠀⠈⢿⣿⣄⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠸⠃⣠⣿⡿⠁⠀        \x1b[0m
         \x1b[44m       ⠀⠀⠀⠻⣿⣷⣄⠙⠻⠿⣿⣿⣿⣿⣿⣿⠿⠀⠀⣠⣾⣿⠟⠀⠀⠀        \x1b[0m

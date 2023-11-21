@@ -1,47 +1,5 @@
 import rs from "readline-sync";
 
-// Create a Game called Perfect Four with readline-sync where the user needs to guess the correct number
-// Options:
-// - The number has 4 digits randomly generated
-// - The user has 8 guesses
-
-// Rules:
-// - If the user guesses the 4 digits in the correct position, the user wins and display: You Win!!!
-// For example: user types 1234 and the number is 1234, the user wins and display You Win!!!
-// - If the user runs out of guesses, the user loses and display You Lose!!!
-
-// - If the user guesses 3 well located numbers and 0 Misplaced numbers, display 3 Well Located and 0 Misplaced | The user has 1 guesses less and try again
-// for example: user types 1235 and the number is 1234
-// - If the user guesses 2 well located numbers and 0 Misplaced numbers, display 2 Well Located and 0 Misplaced | The user has 1 guesses less and try again
-// for example: user types 1298 and the number is 1234
-// - If the user guesses 1 well located numbers and 0 Misplaced numbers, display 1 Well Located and 0 Misplaced | The user has 1 guesses less and try again
-// for example: user types 1987 and the number is 1234
-// - If the user guesses 0 well located numbers and 0 Misplaced numbers, display 0 Well Located and 0 Misplaced | The user has 1 guesses less and try again
-// for example: user types 9876 and the number is 1234
-
-// - If the user guesses 4 misplaced numbers and 0 Well Located numbers, display 4 Misplaced!!! | The user has 1 guesses less and try again
-// for example: user types 4321 and the number is 1234
-// - If the user guesses 3 misplaced numbers and 0 Well Located numbers, display 3 Misplaced!!! | The user has 1 guesses less and try again
-// for example: user types 4329 and the number is 1234
-// - If the user guesses 2 misplaced numbers and 0 Well Located numbers, display 2 Misplaced!!! | The user has 1 guesses less and try again
-// for example: user types 4398 and the number is 1234
-// - If the user guesses 1 misplaced numbers and 0 Well Located numbers, display 1 Misplaced!!! | The user has 1 guesses less and try again
-// for example: user types 4987 and the number is 1234
-
-// - If the user guesses 2 well located and 2 misplaced numbers, display 2 Well Located and 2 Misplaced!!! | The user has 1 guesses less and try again
-// for example: user types 1243 and the number is 1234
-// - If the user guesses 2 well located and 1 misplaced numbers, display 2 Well Located and 1 Misplaced!!! | The user has 1 guesses less and try again
-// for example: user types 1245 and the number is 1234
-// - If the user guesses 1 well located and 1 misplaced numbers, display 1 Well Located and 1 Misplaced!!! | The user has 1 guesses less and try again
-// for example: user types 1498 and the number is 1234
-
-// After very guest display:
-// 1. The number that the user typed
-// 2. Display how many Well Located numbers and how many Misplaced numbers
-// 3. The number of guesses left
-
-// If the user types less than four numbers or more than four numbers, display: You must type 4 numbers
-
 // Function to check the user's guess against the random number
 function checkGuess(randomNumber, userGuess) {
     const randomNumberDigits = randomNumber.toString().split("");

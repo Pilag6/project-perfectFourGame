@@ -66,6 +66,10 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
     feedback might be "Well Located: 2 | Misplaced: 1."
     ```
 
+    <div align="center"> 
+        <img src="./guessRandom.jpg">
+    </div>
+
 5. **Repeated Digits:**
 
     - If you enter a number with repeated digits, you'll be prompted to enter a different one.

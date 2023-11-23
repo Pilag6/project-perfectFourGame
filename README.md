@@ -232,3 +232,10 @@ This is the main game function that orchestrates the Perfect Four game.
 The last line of code calls the `perfectFour` function to start the game.
 
 **Note:** The line `console.log(randomNumber); // DELETE THIS LINE AFTER TESTING` is included for testing purposes and should be removed once testing is complete.
+
+## 7. Sources
+
+-   [readline-sync](https://www.npmjs.com/package/readline-sync)
+-   [Getting Started with readline-sync: Building Command-Line Applications in Node.js](https://bit.ly/47Mf7mZ)
+-   [How to change node.js's console font color?](https://bit.ly/49QdkPB)
+-   [ASCII Art](https://bit.ly/40ODPB1)

@@ -1,5 +1,5 @@
 <div align="center"> 
-    <img src="./perfectFour.png">
+    <img src="./img/perfectFour.png">
 </div>
 
 ## Try to guess the 4-digit number.
@@ -67,7 +67,7 @@ Welcome to the Perfect Four game! This game challenges you to guess a randomly g
     ```
 
     <div align="center"> 
-        <img src="./guessRandom.jpg">
+        <img src="./img/guessRandom.jpg">
     </div>
 
 5. **Repeated Digits:**

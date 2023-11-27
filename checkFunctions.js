@@ -1,4 +1,5 @@
-// Function to check the user's guess against the random number
+// FUNCTION TO CHECK THE USER'S GUESS AGAINST THE RANDOM NUMBER
+
 function checkGuess(randomNumber, userGuess) {
     const randomNumberDigits = randomNumber.toString().split("");
     // console.log(randomNumberDigits)
@@ -30,8 +31,24 @@ console.log(result); // { wellLocated: 1, misplaced: 3 }
 console.log("-".repeat(20));
 
 // --------------------------------------------------
+// FUNCTION TO GENERATE A RANDOM 4-DIGIT DIFFERENT NUMBER
 
-// Function to check if the number has repeated digits
+function generateRandomNumber() {
+    let randomNumber = Math.floor(Math.random() * 10000);
+
+    while (randomNumber < 1000 || hasRepeatedDigits(randomNumber)) {
+        randomNumber = Math.floor(Math.random() * 10000);
+    }
+
+    return randomNumber;
+}
+
+const randomNum = generateRandomNumber();
+console.log(randomNum);
+console.log("-".repeat(20));
+
+// --------------------------------------------------
+// FUNCTION TO CHECK IF THE NUMBER HAS REPEATED DIGITS
 
 function hasRepeatedDigits(number) {
     const digits = String(number).split("");
@@ -43,8 +60,23 @@ function hasRepeatedDigits(number) {
     return digits.length !== uniqueDigits.length;
 }
 
-const hasRepeated = hasRepeatedDigits(1234); 
+const hasRepeated = hasRepeatedDigits(1234);
 const hasRepeatedAgain = hasRepeatedDigits(1224);
 
 console.log(hasRepeated); // false
 console.log(hasRepeatedAgain); // true
+
+// --------------------------------------------------
+// FUNCTION TO DISPLAY GAME STATUS
+function displayStatus(userGuess, wellLocated, misplaced, guessesLeft) {
+    console.log(`
+    1. Your guess: ${userGuess}
+        
+    2. Well Located: ${wellLocated} | Misplaced: ${misplaced}
+        
+    3. Guesses left: ${guessesLeft}
+  `);
+}
+
+displayStatus(1234, 1, 2, 3);
+console.log("-".repeat(20));

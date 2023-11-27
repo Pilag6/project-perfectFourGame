@@ -1,6 +1,6 @@
 import rs from "readline-sync";
 
-// Function to check the user's guess against the random number
+// FUNCTION TO CHECK THE USER'S GUESS AGAINST THE RANDOM NUMBER
 function checkGuess(randomNumber, userGuess) {
     const randomNumberDigits = randomNumber.toString().split("");
 
@@ -20,7 +20,7 @@ function checkGuess(randomNumber, userGuess) {
     return { wellLocated, misplaced };
 }
 
-// // Function to generate a random 4-digit different number
+// FUNCTION TO GENERATE A RANDOM 4-DIGIT DIFFERENT NUMBER
 function generateRandomNumber() {
     let randomNumber = Math.floor(Math.random() * 10000);
 
@@ -31,8 +31,7 @@ function generateRandomNumber() {
     return randomNumber;
 }
 
-// Function to check if the number has repeated digits
-
+// FUNCTION TO CHECK IF THE NUMBER HAS REPEATED DIGITS
 function hasRepeatedDigits(number) {
     const digits = String(number).split("");
 
@@ -43,7 +42,7 @@ function hasRepeatedDigits(number) {
     return digits.length !== uniqueDigits.length;
 }
 
-// // Function to display game status
+// FUNCTION TO DISPLAY GAME STATUS
 function displayStatus(userGuess, wellLocated, misplaced, guessesLeft) {
     console.log(`
     1. Your guess: \x1b[47m\x1b[32m ${userGuess} \x1b[0m\x1b[0m
@@ -54,7 +53,8 @@ function displayStatus(userGuess, wellLocated, misplaced, guessesLeft) {
   `);
 }
 
-// // Main game function
+//-----------------------------------------
+// MAIN GAME FUNCTION
 function perfectFour() {
     let playAgain = true;
 

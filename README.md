@@ -297,15 +297,72 @@ By displaying this information, the displayStatus function contributes to the ov
 
 ## 5. `perfectFour` Function
 
-This is the main game function that orchestrates the Perfect Four game.
+This is the main game function that serves as the main control hub for the Perfect Four game. 
+Let's break down its functionality step by step:
 
--   It calls `generateRandomNumber` to get a random number and initializes the number of remaining guesses.
--   The game welcomes the player and provides the rules.
--   It then enters a loop where the user is prompted to input their guess.
--   The input is validated for length and repeated digits.
--   The game calls `checkGuess` to evaluate the guess and updates the display using `displayStatus`.
--   The game continues until the user correctly guesses the number or runs out of guesses.
--   Also after every game ask the user if he wants to play again.
+1. **Initialization:**
+
+-   `let playAgain = true;`: Initializes a variable to control whether the player wants to play again. The game is set to run at least once.
+
+2. **Outer Loop: Play Again:**
+
+-   `while (playAgain) { ... }`: The game enters an outer loop that runs as long as the player wants to play again.
+
+3. **Random Number Generation:**
+
+-   `const randomNumber = generateRandomNumber();`: The game calls the function `generateRandomNumber` above mentioned that generates a new random 4-digit number at the start of each gameto and stores it in `randomNumber` variable.
+
+4. **Remaining Guesses:**
+
+-   `let guessesLeft = 8;`: The game initializes the number of remaining guesses to 8.
+
+5. **Welcome Message and Rules:**
+
+-   `console.log("Welcome to Perfect Four!");`: Displays a welcome message along with the rules and a link to the complete rules.
+
+6. **Inner Loop: Guessing Phase:**
+
+-   `while (guessesLeft > 0) { ... }`: The game enters an inner loop that runs as long as the player has remaining guesses. Allowing the player the player to make multiple guesses within the given attempts.
+
+7. **Guess Prompt:**
+
+-   `const userGuess = readline.question("Enter your guess: ");`: The game prompts the player to enter a 4-digit number. 
+-   Also validates the input to ensure that the player enters a valid number. If the player enters a number with repeated digits or more or less than 4 digits, the game prompts the player to enter a different number and deducts a guess.
+
+8. **Repeated Digits Check:**
+
+-   `if (hasRepeatedDigits(userGuess)) { ... }`: The game checks if the player's guess contains repeated digits using the `hasRepeatedDigits` function above mentioned. If it does, the game prompts the player to enter a different number and deducts one guess.
+
+9. **Guess Check:**
+
+-   `const guessResult = checkGuess(randomNumber, userGuess);`: The game calls the `checkGuess` function above mentioned to check the player's guess against the randomly generated number. The function returns an object containing the counts of well-located and misplaced digits.
+
+10. **Display Status:**
+
+-   `displayStatus(userGuess, guessResult.wellLocated, guessResult.misplaced, guessesLeft);`: The game calls the `displayStatus` function above mentioned to display the current game status, including the user's guess, well-located and misplaced digits, and the remaining number of guesses.
+
+11. **Winning Check:**
+
+-   `if (guessResult.wellLocated === 4) { ... }`: The game checks if the player has guessed all 4 digits correctly. If they have, the game congratulates the player and breaks out of the inner loop.
+
+12. **Guesses Left Check:**
+
+-   `if (guessesLeft === 0) { ... }`: The game checks if the player has any remaining guesses. If they don't, the game prompts that the player has lost and reveals the correct number.
+
+13. **Guesses Left Update:**
+
+-   `guessesLeft--;`: The game deducts one guess after each guess.
+
+14. **Play Again Prompt:**
+
+-   `playAgain = readline.keyInYNStrict("Do you want to play again?");`: The game prompts the player to play again. If the player enters "Y", the game starts again. If the player enters "N", the game ends. 
+
+-   I am using `keyInYNStrict` instead of `question` to ensure that the player enters either "Y" or "N". If the player enters any other key, the game will prompt them to enter "Y" or "N" again.
+
+15. **Game End:**
+
+-   `console.log("Thanks for playing!");`: The game ends with a thank you message.
+
 
 ## 6. Running the Game
 

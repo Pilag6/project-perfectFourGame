@@ -133,6 +133,8 @@ Good luck and enjoy the Perfect Four game!
 
 ## 1. `checkGuess` Function
 
+![checkGuess](https://github.com/Pilag6/project-perfectFourGame/assets/79191808/0ba811ae-98c4-4a5f-bd76-9338e762d0b8)
+
 This function takes two parameters, `randomNumber` and `userGuess`, and compares them to determine how well the user's guess matches the randomly generated number.
 
 -   `randomNumber`: A randomly generated 4-digit number with unique digits.
@@ -177,6 +179,8 @@ In this example, the function compares the digits at each position in the `rando
 
 ## 2. `generateRandomNumber` Function
 
+![generateRandomNumber](https://github.com/Pilag6/project-perfectFourGame/assets/79191808/a8bbe08c-38c2-4d3f-b19b-8ab3a5a9e8dc)
+
 This function is responsible for generating a random 4-digit number with unique digits, which serves as the target number for the player to guess.
 
 ### Function Logic
@@ -214,6 +218,8 @@ In this example, the function generates a random number and checks it for unique
 
 ## 3. `hasRepeatedDigits` Function
 
+![hasRepeatedDigits](https://github.com/Pilag6/project-perfectFourGame/assets/79191808/45941308-5806-42a3-b1de-83924dfdbcf3)
+
 This function is designed to check whether a given number has repeated digits. It's a crucial part of the Perfect Four game as having repeated digits in a guess is against the game rules. Here's a breakdown of how the function works:
 
 Explanation:
@@ -246,6 +252,8 @@ const hasRepeatedAgain = hasRepeatedDigits(1224); // Returns true (repeated digi
 In the Perfect Four game, this function is used to ensure that the user's guess doesn't contain repeated digits. If a repeated digit is detected, the game prompts the user to enter a different 4-digit number.
 
 ## 4. `displayStatus` Function
+
+![displayStatus](https://github.com/Pilag6/project-perfectFourGame/assets/79191808/4942d809-56fd-43ff-8cbd-0bde8084f570)
 
 This function displays the current game status, including the user's guess, well-located and misplaced digits, and the remaining number of guesses.
 This function is crucial for providing feedback and keeping the player informed about their progress.

@@ -47,8 +47,8 @@ console.log("-".repeat(20));
 // console.log(randomNum);
 // console.log("-".repeat(20));
 
-// // --------------------------------------------------
-// // FUNCTION TO CHECK IF THE NUMBER HAS REPEATED DIGITS
+// --------------------------------------------------
+// FUNCTION TO CHECK IF THE NUMBER HAS REPEATED DIGITS
 
 // function hasRepeatedDigits(number) {
 //     const digits = String(number).split("");
@@ -66,8 +66,9 @@ console.log("-".repeat(20));
 // console.log(hasRepeated); // false
 // console.log(hasRepeatedAgain); // true
 
-// // --------------------------------------------------
-// // FUNCTION TO DISPLAY GAME STATUS
+// --------------------------------------------------
+// FUNCTION TO DISPLAY GAME STATUS
+
 // function displayStatus(userGuess, wellLocated, misplaced, guessesLeft) {
 //     console.log(`
 //     1. Your guess: ${userGuess}

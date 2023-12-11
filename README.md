@@ -36,7 +36,7 @@ This documentation provides an overview of the Perfect Four game code, explainin
 
 Welcome to the Perfect Four game! This game challenges you to guess a randomly generated 4-digit number with unique digits. Here are the rules and instructions:
 
-1. **Objective:** Guess the correct 4-digit number within 8 attempts.
+1. **Objective:** Guess the correct 4-digit number within 8 attempts. The objective of the Perfect Four game is simple - to guess a randomly generated 4-digit number within 8 attempts. It's a game that combines strategy, logic, and a bit of luck. Let's delve into the details.
 
 2. **Game Start:**
 
